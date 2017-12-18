@@ -75,9 +75,9 @@
       </div>
     </nav>
 
-    <header class="masthead text-center text-white d-flex">
-      <div id="panorama">
-       <div class="container my-auto">
+    <header id="panorama" style="position: relative !important;" class="masthead text-center text-white d-flex">
+      
+       <div style="position: absolute !important;" class="container my-auto">
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <h1 class="text-uppercase">
@@ -92,7 +92,6 @@
         </div>
       </div>
 
-      </div>
       
     </header>
 
@@ -319,8 +318,7 @@
 				renderer = new THREE.WebGLRenderer();
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
-			//	container.appendChild( renderer.domElement );
-        container.style.backgroundImage = renderer.domElement;
+				container.appendChild( renderer.domElement );
 				document.addEventListener( 'mousedown', onDocumentMouseDown, false );
 				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 				document.addEventListener( 'mouseup', onDocumentMouseUp, false );
